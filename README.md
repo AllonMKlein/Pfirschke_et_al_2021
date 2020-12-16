@@ -1,20 +1,31 @@
 # ScRNAseq-related analyses for Pfirschke et al. 2020 [1]
 
-[
-placeholder for table of contents
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
-]
+### Table of contents
+- [Data](#data)
+- [Methods](#methods)
+  * [Contributors to this repo](#contributors-to-this-repo)
+  * [From reads to counts](#from-reads-to-counts)
+  * [Filtering, doublet removal, visualization and annotation](#filtering--doublet-removal--visualization-and-annotation)
+  * [Analyses using annotated data](#analyses-using-annotated-data)
+- [References](#references)
 
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 ### Data
-Large data files used by the code in this repository are stored on [GEO](link_to_update).
+Large data files used by the code in this repository are stored on [GEO](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE161771).
 | Description | Filename(s) | 
  ---  | --- 
-| Raw count data before filtering | <library_name>.barcodes.tsv, <library_name>.counts.mtx, <libraray_name>.genes.tsv ([GEOXXX](Link_to_update))|
+| Raw count data before filtering | <library_name>.barcodes.tsv, <library_name>.counts.mtx, <libraray_name>.genes.tsv ([GSE161771](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE161771)|
 | Anndata object combining all libraries after mitochondrial fraction and total count filtering | mito_total_counts_filt_raw_27563x40930_200517_10h29.h5ad |
-| Cell annotation file (i.e. adata.obs) | obs_info_27563x32_200705_10h46.npz |
+| Cell annotation file (i.e. adata.obs) | obs_info_27563x32_201025_14h44.tsv (or .npz [here](data/obs_info_27563x32_201025_14h44.npz)*) |
 
 ### Methods
+
+#### Contributors to this repo
+Angela E. Zou (AZ)
+Marius Messemaker (MM)
+Nicolas A. Gort-Freitas (NGF)
+Rapolas Zilionis (RZ)
 
 #### From reads to counts
 The [indrop.py](https://github.com/indrops) pipeline was used for obtain cells x genes matrices. Yaml files detailing the parameters used can be found [here](yaml_files_for_indrops_pipeline).
@@ -47,13 +58,16 @@ required repeating the visualization of all CD45+ cells.
 #### Analyses using annotated data
 | Methods | Figure panel(s) | Comment | Relevant notebooks | Contributions |
  ---  | --- | --- | --- | ---
-| Example notebook for loading annotated data and xy coordinates | E.g. Fig 2B | This notebooks uses a few examples to guide anyone interested through how the annotated data is organized | [example_load_data_plot_something.ipynb](methods_post_annotation/example_load_data_plot_something.ipynb) | RZ |
+| Example notebook for loading annotated data and xy coordinates | E.g. Fig. 2B | This notebooks uses a few examples to guide anyone interested through how the annotated data is organized | [example_load_data_plot_something.ipynb](methods_post_annotation/example_load_data_plot_something.ipynb) | RZ |
 | Plot a subset of cells from the main SPRING plot, color by gene expression | Multiple figures, the motif of Fig. 4E | Load xy coordinates, select a subset of cells, color by gene expression or population annotation | [Colored_SPRING_plots.ipynb](methods_post_annotation/Colored_SPRING_plots.ipynb) | RZ |
 | Challenge annotations by plotting a heatmap of previously identified marker genes | Fig. 2D | Recreate marker gene heatmap from previous study [2] (same gene order) but using the newly defined cell populations | [Annotation_challenging_marker_gene_heatmaps.ipynb](methods_post_annotation/Annotation_challenging_marker_gene_heatmaps.ipynb) | RZ |
-| State %CD45 abundance, Arrow gene-expression change, and Differential Expression Analysis volcano Figures | S2A, S2E, 2E, 2F, S2C, 4G, S4I, S4J, 5F, S5G, S5H, S2F, S5D, S5E, and S5F | |  [Abundance_and_expression_change_analysis.ipynb](methods_post_annotation/Abundance_and_expression_change_analysis.ipynb) | MM |
+| State %CD45 abundance, Arrow gene-expression change, and Differential Expression Analysis volcano Figures | 2E, 2F, S2A, S2C, S2D, S2F, S2G, 4G, S4I, S4J, 5F, S5D-H | |  [Abundance_and_expression_change_analysis.ipynb](methods_post_annotation/Abundance_and_expression_change_analysis.ipynb) | MM |
+|  | Figs 2G, 3A, S3A |  | [for-github_dotplot.ipynb](methods_post_annotation/for-github_dotplot.ipynb) | AZ |
+|  | Fig. 2H |  | [for-github_fgsea-scatterplot.ipynb](methods_post_annotation/for-github_fgsea-scatterplot.ipynb) | AZ |
+|  | Fig. 2I |  | [for-github_scored-pathway-HM.ipynb](methods_post_annotation/for-github_scored-pathway-HM.ipynb) | AZ |
+|  | Figs. 3B, 5B |  | [for-github_cell-cell-comms_filter+circos.ipynb](methods_post_annotation/for-github_cell-cell-comms_filter+circos.ipynb) | AZ |
+|  | Figs. 3C, S3C, 5C, S5B |  | [for-github_cell-cell-comms_make-HMs.ipynb](methods_post_annotation/for-github_cell-cell-comms_make-HMs.ipynb) | AZ |
 |  |  |  |  |  |
-
-
 
 
 ### References   
