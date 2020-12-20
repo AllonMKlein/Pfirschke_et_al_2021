@@ -22,9 +22,9 @@ Large data files used by the code in this repository are stored on [GEO](https:/
 ### Methods
 
 #### Contributors to this repo
-Angela E. Zou (AZ) 
-Marius Messemaker (MM) 
-Nicolas A. Gort-Freitas (NGF) 
+Angela E. Zou (AZ)  
+Marius Messemaker (MM)  
+Nicolas A. Gort-Freitas (NGF)  
 Rapolas Zilionis (RZ) 
 
 #### From reads to counts
