@@ -24,7 +24,7 @@ Large data files used by the code in this repository are stored on [GEO](https:/
 #### Contributors to this repo
 Angela E. Zou (AZ)  
 Marius Messemaker (MM)  
-Nicolas A. Gort-Freitas (NGF)  
+Nicolas A. Gort-Freitas (NAGF)  
 Rapolas Zilionis (RZ) 
 
 #### From reads to counts
@@ -67,7 +67,7 @@ required repeating the visualization of all CD45+ cells.
 | Heatmap of scores for selected GO:BP terms in MoMac cells | Fig. 2I |  | [for-github_scored-pathway-HM.ipynb](methods_post_annotation/for-github_scored-pathway-HM.ipynb) | AZ |
 | Make circos plots for differentially expressed and immune activating/inhibitory interactions | Figs. 3B, 5B |  | [for-github_cell-cell-comms_filter+circos.ipynb](methods_post_annotation/for-github_cell-cell-comms_filter+circos.ipynb) | AZ |
 | Make heatmaps depicting selected ligand-receptor interactions | Figs. 3C, S3C, 5C, S5B |  | [for-github_cell-cell-comms_make-HMs.ipynb](methods_post_annotation/for-github_cell-cell-comms_make-HMs.ipynb) | AZ |
-|  |  |  |  |  |
+| Fold change with respect to the median across states compared (relative expression); Pearson's r correlation; Linear regression | 3D, S3D, S5 | In this notebook, we compare the relative expression of highlighted ligands & receptors in DCs, NKs, T cells, and Monocyte/Macrophages in non-small cell lung cancer patients (Zilionis et al., 2019) and in vehicle-treated mice to support a cross-species analogy in the behavior of immunity. | [heatmaps_scatter_human_mouse.ipynb](methods_post_annotation/heatmaps_scatter_human_mouse.ipynb) | NAGF |
 
 
 ### References   
