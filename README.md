@@ -1,4 +1,4 @@
-# ScRNAseq-related analyses for Pfirschke et al. 2020 [1]
+# ScRNAseq-related analyses for Pfirschke et al. 2021 [1]
 
 ### Table of contents
 - [Data](#data)
